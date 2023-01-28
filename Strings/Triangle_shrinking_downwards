@@ -1,0 +1,12 @@
+class Solution {
+  public:
+    string triDownwards(string S) {
+        int n = S.size();
+        string ans = "";
+        for(int i = 0; i < n ; i++){
+            ans.append(S);
+            S[i] = '.';
+        }
+        return ans;
+    }
+};
