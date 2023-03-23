@@ -1,0 +1,15 @@
+int isPossible (string S)
+{
+  int mid = S.size()%2 == 0 ? S.size()/2 : S.size()/2 + 1;  // odd even
+  int p  = 0;
+  int q = mid;
+  
+  while(q < S.size()){
+      if(S[p] != S[q]){
+          return 0;
+        // cout << q ; break;
+      }
+      p++; q++;
+  }
+  return 1;
+}
