@@ -1,0 +1,35 @@
+string merge (string s1, string s2)
+{
+    int p = 0;
+    int q = 0;
+    string res = "";
+    // while(p < s1.length() && q < s2.length()){
+    //     res += s1[p];
+    //     res += s2[q];
+        
+    //     p++; q++;
+    // }
+    // while(p < s1.size()){
+    //     res += s1[p];
+    //     p++;
+    // }
+    // while( q < s2.size()){
+    //     res += s2[q];
+    //     q++;
+    // }
+    
+    
+    
+    for(int i = 0 ; i < s2.length() + s1.length(); i++){
+        if(p < s1.length()){                
+            res += s1[i];                           // insert once
+        } 
+        if(q < s2.length()){
+            res += s2[i];                           // insert once
+        }
+        p++;
+        q++;
+    }
+    
+    return res;
+}
