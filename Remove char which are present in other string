@@ -1,0 +1,9 @@
+ string removeChars(string s1, string s2) {
+ 
+  if(s2.empty()) return s1;
+   
+  for(auto x : s2){
+      s1.erase(remove(s1.begin(), s1.end(), x), s1.end()); 
+  }
+    
+    return s1;
