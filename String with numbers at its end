@@ -1,0 +1,16 @@
+int isSame(string s)
+	{
+	     int n = s.length();
+	    int num = 0, i = n-1, x = 1 ;
+	   
+	    for(i = n-1; i >= 0; i--){
+	        if(s[i] >= '0' && s[i] <= '9'){
+	            num = (s[i] - '0') * x + num;     // number can be of any digit
+	            x = x * 10;         // power of 10
+	            
+	            if(num >= n) return false;
+	        }
+	        else break;
+	    }
+	    return num == i+1;
+	}
